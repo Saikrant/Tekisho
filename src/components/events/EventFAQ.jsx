@@ -77,8 +77,8 @@ const EventFAQ = () => {
             <div>
               <h3 className="font-bold text-[#0A1D37] mb-4">Post-Event Feedback</h3>
               {feedbackSent ? (
-                <div className="bg-green-50 border border-green-200 rounded-2xl p-6 text-center">
-                  <p className="text-green-700 font-medium">Thanks for your feedback!</p>
+                <div className="bg-blue-50 border border-blue-200 rounded-2xl p-6 text-center">
+                  <p className="text-blue-700 font-medium">Thanks for your feedback!</p>
                 </div>
               ) : (
                 <div className="bg-slate-50 border border-slate-200 rounded-2xl p-6 space-y-3">

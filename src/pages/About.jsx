@@ -80,14 +80,14 @@ export default function About() {
       <section className="py-24 px-4 sm:px-6 lg:px-8 w-full" style={{ backgroundColor: 'var(--accent-primary)' }}>
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-serif text-white mb-6">Our Mission</h2>
-          <p className="text-xl text-green-50 max-w-3xl mx-auto mb-16 opacity-90">
+          <p className="text-xl text-blue-50 max-w-3xl mx-auto mb-16 opacity-90">
             Driving transformation through purpose, vision, and unwavering commitment to excellence
           </p>
           
           <div className="grid md:grid-cols-2 gap-8 mb-16 max-w-5xl mx-auto">
             {/* Mission Card */}
             <div className="bg-white rounded-2xl p-10 md:p-12 text-center shadow-xl hover:-translate-y-1 transition-transform duration-300">
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-green-50 mb-6">
+              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-blue-50 mb-6">
                 <Target className="w-8 h-8" style={{ color: 'var(--accent-primary)' }} />
               </div>
               <h3 className="text-2xl font-serif mb-4" style={{ color: 'var(--text-primary)' }}>Our Mission</h3>
@@ -98,7 +98,7 @@ export default function About() {
             
             {/* Vision Card */}
             <div className="bg-white rounded-2xl p-10 md:p-12 text-center shadow-xl hover:-translate-y-1 transition-transform duration-300">
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-green-50 mb-6">
+              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-blue-50 mb-6">
                 <Eye className="w-8 h-8" style={{ color: 'var(--accent-primary)' }} />
               </div>
               <h3 className="text-2xl font-serif mb-4" style={{ color: 'var(--text-primary)' }}>Our Vision</h3>
@@ -108,7 +108,7 @@ export default function About() {
             </div>
           </div>
           
-          <p className="text-lg text-green-50 max-w-4xl mx-auto leading-relaxed border-t border-green-800/50 pt-12">
+          <p className="text-lg text-blue-50 max-w-4xl mx-auto leading-relaxed border-t border-blue-800/50 pt-12">
             Guided by our <strong className="text-white font-medium">CLAIM</strong> values—<strong className="text-white font-medium">Customer Centricity, Leadership, Accountability, Integrity, and Mindful Innovation</strong>—we ensure that every solution we create is in its right place, bringing together technology, purpose, and human ingenuity.
           </p>
         </div>

@@ -18,7 +18,7 @@ const LeadQAILaunch = () => (
           transition={{ duration: 0.8 }}
         >
           <div className="inline-flex items-center gap-2 bg-blue-600/10 backdrop-blur-md border border-blue-500/20 rounded-full px-4 py-1.5 mb-8">
-            <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
+            <span className="w-2 h-2 rounded-full bg-blue-400 animate-pulse" />
             <span className="text-blue-200 text-xs font-bold tracking-widest uppercase">Official Launch · 29 March 2026</span>
           </div>
 
@@ -81,9 +81,9 @@ const LeadQAILaunch = () => (
                 <h3 className="font-bold text-xl tracking-tight">LeadQ Intelligence</h3>
                 <p className="text-blue-400 text-sm font-semibold">Active Session · v1.0.4</p>
               </div>
-              <div className="ml-auto flex items-center gap-2 bg-green-500/10 px-3 py-1 rounded-full">
-                <span className="w-1.5 h-1.5 rounded-full bg-green-500" />
-                <span className="text-green-500 text-[10px] font-black uppercase tracking-widest">Live</span>
+              <div className="ml-auto flex items-center gap-2 bg-blue-500/10 px-3 py-1 rounded-full">
+                <span className="w-1.5 h-1.5 rounded-full bg-blue-500" />
+                <span className="text-blue-500 text-[10px] font-black uppercase tracking-widest">Live</span>
               </div>
             </div>
 
@@ -97,7 +97,7 @@ const LeadQAILaunch = () => (
                   <span className="text-blue-100/60 text-sm font-medium">{label}</span>
                   <div className="text-right">
                     <p className="font-bold text-lg">{val}</p>
-                    <p className="text-green-400 text-[10px] font-bold uppercase">{change}</p>
+                    <p className="text-cyan-400 text-[10px] font-bold uppercase">{change}</p>
                   </div>
                 </div>
               ))}
