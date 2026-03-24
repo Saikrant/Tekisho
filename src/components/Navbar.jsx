@@ -46,8 +46,12 @@ const Navbar = () => {
       <div style={styles.container}>
         
         {/* Minimalist Text Logo */}
-        <Link to="/" style={styles.logo}>
-          Tekisho
+        <Link to="/" style={{ display: 'flex', alignItems: 'center' }}>
+          <img 
+            src="/tekisho-logo.png" 
+            alt="Tekisho" 
+            style={{ height: '45px', width: 'auto', objectFit: 'contain' }} 
+          />
         </Link>
 
         {/* Status Badge & Socials */}

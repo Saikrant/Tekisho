@@ -17,9 +17,13 @@ const Footer = () => {
           
           {/* 1. Brand */}
           <div className="flex flex-col gap-4">
-            <div className=" " style={{ fontSize: '2rem', color: '#0055ff', fontWeight: 'bold', letterSpacing: '-0.02em', lineHeight: '1' }}>
-              TEKISHO
-            </div>
+            <Link to="/" className="inline-block mb-2">
+              <img 
+                src="/tekisho-logo.png" 
+                alt="Tekisho Logo" 
+                style={{ height: '48px', width: 'auto', minWidth: '150px', objectFit: 'contain' }} 
+              />
+            </Link>
             <p className="text-[var(--text-secondary)] text-sm leading-relaxed max-w-[280px]">
               AI-driven innovation delivering cutting-edge solutions across Integration, ERP, Cloud Technologies, and Application Development.
             </p>
