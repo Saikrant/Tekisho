@@ -42,22 +42,22 @@ const BottomNav = () => {
           borderRadius: '9999px',
           display: 'flex',
           alignItems: 'center',
-          gap: '0.25rem',
+          gap: '0.15rem',
           boxShadow: '0 8px 32px rgba(0, 5, 25, 0.12)',
           border: '1px solid rgba(255, 255, 255, 0.8)',
           pointerEvents: 'auto',
-          maxWidth: '98vw',
-          padding: '0.4rem 0.5rem 0.4rem 0.75rem'
+          maxWidth: '96vw',
+          padding: '0.3rem 0.4rem 0.3rem 0.5rem'
         }}
       >
         
         {/* All nav links — icons + labels on all screen sizes */}
-        <nav className="flex items-center gap-0.5 sm:gap-1">
+        <nav className="flex items-center gap-0.5">
           {navLinks.map(({ path, label, icon }) => (
             <Link 
               key={path}
               to={path} 
-              className={`flex flex-col items-center gap-0.5 px-2.5 sm:px-3 py-1.5 rounded-full transition-all text-center min-w-[44px] ${
+              className={`flex flex-col items-center gap-0.5 px-2 sm:px-3 py-1.5 rounded-full transition-all text-center min-w-[40px] ${
                 location.pathname === path 
                   ? 'text-blue-600 bg-blue-50/60' 
                   : 'text-slate-400 hover:text-slate-600 hover:bg-slate-50/50'
@@ -65,7 +65,7 @@ const BottomNav = () => {
               title={label}
             >
               {icon}
-              <span className="text-[8px] sm:text-[9px] font-bold uppercase tracking-wider leading-none">{label}</span>
+              <span className="text-[7px] sm:text-[9px] font-bold uppercase tracking-wider leading-none">{label}</span>
             </Link>
           ))}
         </nav>
@@ -73,8 +73,8 @@ const BottomNav = () => {
         <div className="h-7 w-[1px] bg-slate-200/60 mx-1 flex-shrink-0" />
 
         {/* Primary CTA */}
-        <button className="bg-[#0055FF] text-white font-black px-4 sm:px-7 py-2.5 sm:py-3 rounded-full text-[9px] sm:text-[10px] uppercase tracking-[0.12em] shadow-lg shadow-blue-500/25 active:scale-95 hover:scale-[1.02] transition-all whitespace-nowrap flex-shrink-0">
-          Get Started
+        <button className="bg-[#0055FF] text-white font-black px-3 sm:px-7 py-2.5 sm:py-3 rounded-full text-[8.5px] sm:text-[10px] uppercase tracking-[0.1em] shadow-lg shadow-blue-500/25 active:scale-95 hover:scale-[1.02] transition-all whitespace-nowrap flex-shrink-0">
+          GET STARTED
         </button>
 
       </div>
