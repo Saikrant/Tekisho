@@ -79,7 +79,7 @@ const Form = () => {
         type="submit"
         className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 rounded-xl transition-all duration-300 mt-2 shadow-lg shadow-blue-100 flex items-center justify-center gap-2 hover:-translate-y-0.5"
       >
-        Complete Registration <ArrowRight className="w-5 h-5" />
+        Register Free <ArrowRight className="w-5 h-5" />
       </button>
       
       <p className="text-xs text-slate-400 text-center mt-4">
