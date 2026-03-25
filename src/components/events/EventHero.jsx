@@ -4,28 +4,36 @@ import { Calendar, Clock, MapPin, ArrowRight, Sparkles } from 'lucide-react'
 import { motion, useScroll, useTransform } from 'framer-motion'
 
 /* ── Typewriter ── */
-const Typewriter = ({ text, delay = 80 }) => {
+const Typewriter = ({ text, delay = 80, startDelay = 0 }) => {
   const [currentText, setCurrentText] = useState('')
   const [currentIndex, setCurrentIndex] = useState(0)
+  const [isStarted, setIsStarted] = useState(false)
 
   useEffect(() => {
-    if (currentIndex < text.length) {
+    const startTimeout = setTimeout(() => setIsStarted(true), startDelay)
+    return () => clearTimeout(startTimeout)
+  }, [startDelay])
+
+  useEffect(() => {
+    if (isStarted && currentIndex < text.length) {
       const timeout = setTimeout(() => {
         setCurrentText(prev => prev + text[currentIndex])
         setCurrentIndex(prev => prev + 1)
       }, delay)
       return () => clearTimeout(timeout)
     }
-  }, [currentIndex, delay, text])
+  }, [currentIndex, delay, text, isStarted])
 
   return (
     <span className="inline-block relative">
       {currentText}
-      <motion.span
-        animate={{ opacity: [0, 1, 0] }}
-        transition={{ repeat: Infinity, duration: 0.8 }}
-        className="inline-block w-[0.06em] h-[0.75em] bg-blue-500 ml-[0.05em] align-middle rounded-full"
-      />
+      {isStarted && currentIndex < text.length && (
+        <motion.span
+          animate={{ opacity: [0, 1, 0] }}
+          transition={{ repeat: Infinity, duration: 0.8 }}
+          className="inline-block w-[0.05em] h-[0.7em] bg-blue-500 ml-[0.05em] align-middle rounded-full"
+        />
+      )}
     </span>
   )
 }
@@ -171,12 +179,20 @@ const EventHero = () => {
           </motion.div>
 
           {/* Headline */}
-          <motion.div variants={fadeUp} className="mb-6">
+          <motion.div variants={fadeUp} className="mb-8">
             <h1
-              className="font-black text-[#0B2447] leading-[1.05] tracking-tighter uppercase"
-              style={{ fontSize: 'clamp(1.6rem, 5.5vw, 5.2rem)' }}
+              className="font-black text-[#0B2447] leading-[1] tracking-tighter uppercase flex flex-col items-center"
+              style={{ fontSize: 'clamp(2.5rem, 10vw, 7rem)' }}
             >
-              <Typewriter text="TEKISHO AI Growth Summit" delay={80} />
+              <span className="block">
+                <Typewriter text="TEKISHO" delay={100} />
+              </span>
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600 py-1 whitespace-nowrap">
+                <Typewriter text="AI Growth Summit" delay={60} startDelay={1000} />
+              </span>
+              <span className="block text-blue-600 mt-2 font-black">
+                <Typewriter text="2026" delay={150} startDelay={2500} />
+              </span>
             </h1>
           </motion.div>
 
