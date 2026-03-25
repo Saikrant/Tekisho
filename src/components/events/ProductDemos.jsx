@@ -32,7 +32,7 @@ const products = [
 
 const ProductDemos = () => (
   <section id="demos" className="py-20 px-4 bg-white">
-    <div className="max-w-5xl mx-auto">
+    <div className="max-w-7xl mx-auto">
       <div className="text-center mb-12">
         <span className="text-blue-600 font-semibold text-sm tracking-widest uppercase">In Progress</span>
         <h2 className="text-3xl sm:text-4xl font-bold text-[#0A1D37] mt-2">Upcoming Product Demos</h2>
@@ -41,7 +41,7 @@ const ProductDemos = () => (
         </p>
       </div>
 
-      <div className="grid sm:grid-cols-2 gap-6">
+      <div className="grid md:grid-cols-3 gap-6">
         {products.map(({ name, tagline, desc, icon, status, statusColor, features }) => (
           <div key={name} className="bg-slate-50 border border-slate-200 rounded-2xl p-6 hover:-translate-y-1 transition-transform duration-200">
             <div className="flex items-start justify-between mb-4">
