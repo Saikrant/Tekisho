@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 
 // Images are stored in public/leaders - use direct path strings
-const imgChiefGuest  = '/leaders/00_chief_guest_Duddilla_Sridhar_Babu.png';
-const imgKiran       = '/leaders/01_Kiran_Komatla.png';
-const imgSatya       = '/leaders/02_Satyanarayana_Kasturi.png';
-const imgKRC         = '/leaders/03_KRC_Murthy.png';
-const imgAshish      = '/leaders/04_Dr_Ashish_Shrivastava.png';
-const imgSanjeev     = '/leaders/05_Sanjeev_Arcot.png';
-const imgBhaskar     = '/leaders/06_Bhaskar_Vadlamani.png';
-const imgSaurabh     = '/leaders/07_Saurabh_Agrawal.png';
-const imgSanjana     = '/leaders/08_Sanjana_Shah.png';
+const imgChiefGuest = '/leaders/00_chief_guest_Duddilla_Sridhar_Babu.png';
+const imgKiran = '/leaders/01_Kiran_Komatla.png';
+const imgSatya = '/leaders/02_Satyanarayana_Kasturi.png';
+const imgKRC = '/leaders/03_KRC_Murthy.png';
+const imgAshish = '/leaders/04_Dr_Ashish_Shrivastava.png';
+const imgSanjeev = '/leaders/05_Sanjeev_Arcot.png';
+const imgBhaskar = '/leaders/06_Bhaskar_Vadlamani.png';
+const imgSaurabh = '/leaders/07_Saurabh_Agrawal.png';
+const imgSanjana = '/leaders/08_Sanjana_Shah.png';
 
 const chiefGuest = {
   name: 'Sri Duddilla Sridhar Babu',
@@ -73,7 +73,7 @@ const panelMembers = [
     role: 'Executive Director',
     org: 'BNI Hyderabad West',
     photo: imgSanjana,
-    linkedin: null,
+    linkedin: 'https://linkedin.com/in/sanjana-shah-001584118',
   },
 ];
 
@@ -93,12 +93,12 @@ const ChiefGuestCard = ({ name, role, org, photo }) => (
   <div className="group relative w-full bg-[#0A1D37] rounded-[2.5rem] overflow-hidden shadow-2xl shadow-blue-900/20 border border-white/5">
     {/* Subtle blue radial glow */}
     <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-[120px] -mr-48 -mt-48" />
-    
+
     <div className="relative flex flex-col lg:flex-row min-h-[400px]">
       {/* Left side: large photo */}
       <div className="lg:w-2/5 relative overflow-hidden h-[300px] lg:h-auto">
-        <img 
-          src={photo} 
+        <img
+          src={photo}
           alt={name}
           className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
         />
@@ -121,7 +121,7 @@ const ChiefGuestCard = ({ name, role, org, photo }) => (
         <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight">
           {name}
         </h3>
-        
+
         <div className="w-16 h-0.5 bg-blue-500/50 mb-6" />
 
         <p className="text-blue-100/90 text-lg lg:text-xl font-medium leading-relaxed mb-2">
@@ -153,14 +153,14 @@ const PanelMemberCard = ({ name, role, org, photo, linkedin }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <div 
+    <div
       className="relative aspect-[3/4] rounded-2xl overflow-hidden group cursor-pointer bg-[#0A1D37] border border-white/5 shadow-xl transition-all duration-300"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
       {/* Background Image - Increase base scale to hide circular borders */}
-      <img 
-        src={photo} 
+      <img
+        src={photo}
         alt={name}
         className={`w-full h-full object-cover object-top transition-transform duration-700 ease-out scale-[1.12] ${isHovered ? 'scale-[1.22]' : ''}`}
       />
@@ -193,7 +193,7 @@ const PanelMemberCard = ({ name, role, org, photo, linkedin }) => {
         {/* LinkedIn Button (Always visible if exists) */}
         {linkedin && (
           <div className="flex items-center">
-            <a 
+            <a
               href={linkedin}
               target="_blank"
               rel="noopener noreferrer"
@@ -217,7 +217,7 @@ const SpeakersSection = () => {
   return (
     <section id="speakers" className="py-24 px-4 bg-slate-50 overflow-hidden">
       <div className="max-w-6xl mx-auto">
-        
+
         {/* Header Section */}
         <div className="text-center mb-16">
           <span className="text-blue-600 font-bold text-sm tracking-[0.25em] uppercase block mb-4">
@@ -261,7 +261,7 @@ const SpeakersSection = () => {
               Hover to see details
             </span>
           </div>
-          
+
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
             {panelMembers.map((m, i) => (
               <PanelMemberCard key={i} {...m} />
