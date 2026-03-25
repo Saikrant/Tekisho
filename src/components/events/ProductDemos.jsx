@@ -1,8 +1,15 @@
-// src/components/events/ProductDemos.jsx
-import React from 'react'
-import { Mail, Mic } from 'lucide-react'
+import { Mail, Mic, Zap } from 'lucide-react'
 
 const products = [
+  {
+    name: 'LeadQ.AI',
+    tagline: 'Flagship Lead Intelligence',
+    desc: 'Advanced AI-powered lead generation and qualification engine built for modern sales enterprise teams.',
+    icon: <Zap className="w-6 h-6" />,
+    status: 'Official Launch',
+    statusColor: 'bg-blue-100 text-blue-700',
+    features: ['AI-powered lead scoring', 'Real-time qualification', 'CRM & ERP integration'],
+  },
   {
     name: 'EmailQ.AI',
     tagline: 'Intelligent Email Automation',
