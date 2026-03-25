@@ -8,25 +8,25 @@ export default function About() {
       name: "Srikanth Bonugu",
       designation: "Co-Founder",
       quote: "20+ years in IT business development and growth. Focused on AI-powered solutions, client partnerships, and talent empowerment across India and the US.",
-      src: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=3540&auto=format&fit=crop"
+      src: "/leaders/1.png"
     },
     {
       name: "Mallikarjun Dontula",
       designation: "Co-Founder",
       quote: "20+ years in U.S. tech strategy with expertise in SAP, Boomi, AWS, Azure Databricks, and Generative AI. Leads transformation where people and technology converge.",
-      src: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=3540&auto=format&fit=crop"
+      src: "/leaders/2.png"
     },
     {
       name: "Manasa Donthineni",
       designation: "Managing Director",
       quote: "19+ years in IT with expertise in sales, recruitment, and project management. Passionate about empowering teams, driving innovation, and creating lasting impact.",
-      src: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=3540&auto=format&fit=crop"
+      src: "/leaders/3.png"
     },
     {
       name: "Ramakrishna (Ram) Botta",
       designation: "Board Director & Strategic Advisor",
       quote: "20+ years in HR leadership, governance, and advisory across IT, pharma, and emerging tech. Guides Tekisho's strategy, partnerships, and AI-driven growth.",
-      src: "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=3540&auto=format&fit=crop"
+      src: "/leaders/4.png"
     }
   ];
 
@@ -38,7 +38,7 @@ export default function About() {
           <h1 className="text-5xl md:text-6xl font-serif mb-8 text-[var(--text-primary)] leading-tight">
             About <span className="text-[var(--accent-primary)] font-medium">Tekisho</span>
           </h1>
-          
+
           <div className="space-y-6 text-lg text-[var(--text-secondary)] leading-relaxed text-left md:text-center">
             <p>
               Tekisho means <strong className="text-[var(--text-primary)] font-medium">"the right place"</strong>—a perfect alignment of people, ideas, and purpose. At Tekisho we embody this principle by creating the right place where vision meets execution, and bold ideas become transformative realities.
@@ -70,7 +70,7 @@ export default function About() {
             </li>
           </ul>
         </div>
-        
+
         <p className="text-center text-lg text-[var(--text-secondary)] max-w-3xl mx-auto leading-relaxed">
           From startups to Fortune 500 enterprises, across industries like manufacturing, healthcare, logistics, energy, retail, and BFSI, we deliver results that are not only impactful but enduring.
         </p>
@@ -83,7 +83,7 @@ export default function About() {
           <p className="text-xl text-blue-50 max-w-3xl mx-auto mb-16 opacity-90">
             Driving transformation through purpose, vision, and unwavering commitment to excellence
           </p>
-          
+
           <div className="grid md:grid-cols-2 gap-8 mb-16 max-w-5xl mx-auto">
             {/* Mission Card */}
             <div className="bg-white rounded-2xl p-10 md:p-12 text-center shadow-xl hover:-translate-y-1 transition-transform duration-300">
@@ -95,7 +95,7 @@ export default function About() {
                 To make digital transformation accessible, intelligent, and impactful—delivering rapid, economical AI solutions with integrity, innovation, and an unwavering focus on our customers.
               </p>
             </div>
-            
+
             {/* Vision Card */}
             <div className="bg-white rounded-2xl p-10 md:p-12 text-center shadow-xl hover:-translate-y-1 transition-transform duration-300">
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-blue-50 mb-6">
@@ -107,7 +107,7 @@ export default function About() {
               </p>
             </div>
           </div>
-          
+
           <p className="text-lg text-blue-50 max-w-4xl mx-auto leading-relaxed border-t border-blue-800/50 pt-12">
             Guided by our <strong className="text-white font-medium">CLAIM</strong> values—<strong className="text-white font-medium">Customer Centricity, Leadership, Accountability, Integrity, and Mindful Innovation</strong>—we ensure that every solution we create is in its right place, bringing together technology, purpose, and human ingenuity.
           </p>
@@ -139,7 +139,7 @@ export default function About() {
             Visionary leaders driving innovation and transformation with decades of experience
           </p>
         </div>
-        
+
         <AnimatedTestimonials testimonials={leadership} autoplay={true} />
       </section>
     </main>

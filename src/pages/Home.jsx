@@ -5,7 +5,6 @@ import WhyTekisho from '../components/WhyTekisho';
 import Services from '../components/Services';
 import { RoadmapSection } from '../components/RoadmapSection';
 import Comparison from '../components/Comparison';
-import TestimonialsSection from '../components/TestimonialsSection';
 
 export default function Home() {
   return (
@@ -16,7 +15,6 @@ export default function Home() {
       <RoadmapSection />
       <Services />
       <Comparison />
-      <TestimonialsSection />
     </main>
   );
 }
