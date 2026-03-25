@@ -187,10 +187,10 @@ const EventHero = () => {
               <span className="block">
                 <Typewriter text="TEKISHO" delay={100} />
               </span>
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600 py-1 whitespace-nowrap">
+              <span className="block py-1 whitespace-nowrap text-blue-600">
                 <Typewriter text="AI Growth Summit" delay={60} startDelay={1000} />
               </span>
-              <span className="block text-blue-600 mt-2 font-black">
+              <span className="block text-blue-500 mt-2 font-black">
                 <Typewriter text="2026" delay={150} startDelay={2500} />
               </span>
             </h1>
