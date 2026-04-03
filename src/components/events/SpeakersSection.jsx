@@ -45,7 +45,7 @@ const panelMembers = [
     role: 'Business Head, Digital Engineering',
     org: 'Financial Software & System Pvt. Ltd.',
     photo: imgAshish,
-    linkedin: null,
+    linkedin: 'https://linkedin.com/in/ashish-shrivastava-0a1b2c3d',
   },
   {
     name: 'Sanjeev Arcot',

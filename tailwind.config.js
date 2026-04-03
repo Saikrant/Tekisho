@@ -14,7 +14,30 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        display: ['"Plus Jakarta Sans"', 'sans-serif'],
+        body: ['"DM Sans"', 'sans-serif'],
+        mono: ['"DM Mono"', 'monospace'],
+      },
       colors: {
+        brand: {
+          blue: '#1B4FD8',
+          navy: '#0B1629',
+          'navy-mid': '#1E2D47',
+          light: '#3B82F6',
+          glow: 'rgba(27,79,216,0.15)',
+          border: 'rgba(27,79,216,0.12)',
+        },
+        surface: {
+          white: '#FFFFFF',
+          off: '#F7F9FC',
+          subtle: '#EEF2FF',
+        },
+        text: {
+          primary: '#0B1629',
+          muted: '#5A6A85',
+          light: '#8FA3BF',
+        },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

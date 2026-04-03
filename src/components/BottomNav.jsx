@@ -17,22 +17,11 @@ const BottomNav = () => {
 
   return (
     <motion.div 
+      className="md:hidden flex justify-center items-center fixed z-[1000] pointer-events-none left-0 right-0 mx-auto px-3"
       initial={{ y: 80, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.7, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
-      style={{
-        position: 'fixed',
-        bottom: '1rem',
-        left: 0,
-        right: 0,
-        margin: '0 auto',
-        zIndex: 1000,
-        pointerEvents: 'none',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        padding: '0 0.75rem'
-      }}
+      style={{ bottom: '1rem' }}
     >
       <div 
         style={{

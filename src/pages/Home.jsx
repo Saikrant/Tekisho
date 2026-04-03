@@ -1,20 +1,22 @@
-import React from 'react';
-import Hero from '../components/Hero';
-import { Industries } from '../components/Industries';
-import WhyTekisho from '../components/WhyTekisho';
-import Services from '../components/Services';
-import { RoadmapSection } from '../components/RoadmapSection';
-import Comparison from '../components/Comparison';
+// src/pages/Home.jsx
+import HeroSection from "@/components/home/HeroSection";
+import TrustStrip from "@/components/home/TrustStrip";
+import ProductsBento from "@/components/home/ProductsBento";
+import WhyTekisho from "@/components/home/WhyTekisho";
+import ClaimValues from "@/components/home/ClaimValues";
+import Industries from "@/components/home/Industries";
+import CtaBand from "@/components/home/CtaBand";
 
 export default function Home() {
   return (
     <main>
-      <Hero />
-      <Industries />
+      <HeroSection />
+      <ClaimValues />
+      {/* <TrustStrip /> */}
+      <ProductsBento />
       <WhyTekisho />
-      <RoadmapSection />
-      <Services />
-      <Comparison />
+      <Industries />
+      <CtaBand />
     </main>
   );
 }
