@@ -473,20 +473,126 @@ export default function HeroSection() {
         </div>
 
 
-        {/* Mobile: stacked chips */}
-        <div className="flex gap-2 flex-wrap justify-center mt-8 px-6 lg:hidden">
-          {CARDS.map(c => {
-            const Icon = c.icon
-            return (
-              <span key={c.id}
-                className="flex items-center gap-2 bg-white border border-[rgba(27,79,216,0.12)]
-                           rounded-full px-4 py-2 font-display font-semibold
-                           text-[13px] text-[#0B1629]">
-                <Icon size={12} style={{ color: c.accent }} />
-                {c.product}
-              </span>
-            )
-          })}
+        {/* Mobile: single active card */}
+        <div className="lg:hidden w-full px-6 mt-4">
+          <div className="relative overflow-hidden">
+            {CARDS.map((card, i) => {
+              const Icon = card.icon
+              const isActive = i === activeIndex
+              const centerFilled = isActive && theme === 'bold'
+              return (
+                <motion.div
+                  key={card.id}
+                  animate={{
+                    opacity: isActive ? 1 : 0,
+                    x: isActive ? 0 : (i < activeIndex ? -24 : 24),
+                    pointerEvents: isActive ? 'auto' : 'none',
+                  }}
+                  transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+                  className="absolute inset-0"
+                  style={{ position: isActive ? 'relative' : 'absolute' }}
+                >
+                  <div
+                    className="rounded-2xl overflow-hidden border"
+                    style={{
+                      background: centerFilled ? card.accent : 'white',
+                      borderColor: centerFilled ? 'rgba(255,255,255,0.18)' : `${card.accent}30`,
+                      boxShadow: `0 12px 40px rgba(0,0,0,0.10), 0 0 0 1px ${card.accent}15`,
+                    }}
+                  >
+                    {/* Top accent bar */}
+                    <div style={{
+                      height: 4,
+                      background: centerFilled
+                        ? 'linear-gradient(90deg, transparent, rgba(255,255,255,0.5), transparent)'
+                        : `linear-gradient(90deg, transparent 0%, ${card.accent} 50%, transparent 100%)`,
+                    }} />
+
+                    <div className="p-5">
+                      {/* Header row */}
+                      <div className="flex items-center justify-between mb-3">
+                        <div className="flex items-center gap-2.5">
+                          <div className="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0"
+                            style={{
+                              background: centerFilled ? 'rgba(255,255,255,0.18)' : `${card.accent}12`,
+                              border: `1px solid ${centerFilled ? 'rgba(255,255,255,0.3)' : card.accent + '22'}`,
+                            }}>
+                            <Icon size={16} style={{ color: centerFilled ? '#fff' : card.accent }} />
+                          </div>
+                          <div>
+                            <div className="font-display font-bold text-[14px] leading-tight"
+                              style={{ color: centerFilled ? '#fff' : '#0B1629' }}>
+                              {card.product}
+                            </div>
+                            <div className="font-mono text-[9px] tracking-wide mt-0.5"
+                              style={{ color: centerFilled ? 'rgba(255,255,255,0.6)' : '#8FA3BF' }}>
+                              {card.category}
+                            </div>
+                          </div>
+                        </div>
+                        <span className="font-mono text-[9px] font-semibold rounded-full px-2.5 py-1"
+                          style={{
+                            background: centerFilled ? 'rgba(255,255,255,0.18)' : `${card.accent}10`,
+                            color: centerFilled ? '#fff' : card.accent,
+                          }}>
+                          {card.badge}
+                        </span>
+                      </div>
+
+                      {/* Description */}
+                      <p className="font-body text-[12px] leading-[1.65] mb-4"
+                        style={{ color: centerFilled ? 'rgba(255,255,255,0.75)' : '#5A6A85' }}>
+                        {card.desc}
+                      </p>
+
+                      {/* Stats */}
+                      <div className="grid grid-cols-3 gap-1.5">
+                        {card.stats.map((stat) => {
+                          const StatIcon = stat.icon
+                          return (
+                            <div key={stat.label}
+                              className="rounded-xl p-2 text-center"
+                              style={{
+                                background: centerFilled ? 'rgba(255,255,255,0.12)' : `${card.accent}08`,
+                                border: `1px solid ${centerFilled ? 'rgba(255,255,255,0.18)' : card.accent + '18'}`,
+                              }}>
+                              <StatIcon size={9} className="mx-auto mb-1"
+                                style={{ color: centerFilled ? 'rgba(255,255,255,0.6)' : card.accent }} />
+                              <div className="font-display font-bold text-[13px] leading-none mb-0.5"
+                                style={{ color: centerFilled ? '#fff' : card.accent }}>
+                                {stat.value}
+                              </div>
+                              <div className="font-mono text-[8px] leading-tight"
+                                style={{ color: centerFilled ? 'rgba(255,255,255,0.5)' : '#8FA3BF' }}>
+                                {stat.label}
+                              </div>
+                            </div>
+                          )
+                        })}
+                      </div>
+                    </div>
+                  </div>
+                </motion.div>
+              )
+            })}
+          </div>
+
+          {/* Mobile nav dots */}
+          <div className="flex items-center justify-center gap-2 mt-5">
+            {CARDS.map((_, i) => (
+              <motion.button
+                key={i}
+                onClick={() => setActiveIndex(i)}
+                animate={{
+                  width: i === activeIndex ? 22 : 6,
+                  background: i === activeIndex ? '#1B4FD8' : 'rgba(27,79,216,0.2)',
+                }}
+                transition={{ duration: 0.3 }}
+                className="h-[6px] rounded-full border-0 p-0 cursor-pointer"
+                style={{ minWidth: i === activeIndex ? 22 : 6 }}
+              />
+            ))}
+          </div>
         </div>
       </motion.div>
     </section>
