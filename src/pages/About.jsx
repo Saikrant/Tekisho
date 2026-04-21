@@ -1,6 +1,8 @@
 import React from 'react';
 import { Target, Eye, ChevronRight } from 'lucide-react';
 import { AnimatedTestimonials } from '../components/ui/animated-testimonials';
+import SEOHead from '@/components/SEOHead';
+import { OrgSchema } from '@/components/SchemaMarkup';
 
 export default function About() {
   const leadership = [
@@ -31,7 +33,10 @@ export default function About() {
   ];
 
   return (
-    <main className="w-full bg-[var(--bg-main)]">
+    <>
+      <SEOHead page="about" />
+      <OrgSchema />
+      <main id="main-content" className="w-full bg-[var(--bg-main)]">
       {/* Intro Section */}
       <section className="pt-32 pb-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div className="text-center max-w-4xl mx-auto mb-16">
@@ -143,5 +148,6 @@ export default function About() {
         <AnimatedTestimonials testimonials={leadership} autoplay={true} />
       </section>
     </main>
+    </>
   );
 }

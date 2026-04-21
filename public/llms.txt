@@ -1,0 +1,34 @@
+# Tekisho Infotech
+
+> Tekisho is an enterprise AI and digital transformation company
+> with offices in Hyderabad, India and Irving, Texas, USA.
+
+## What Tekisho Does
+- Generative AI and Agentic AI system development
+- SAP S/4HANA implementation, migration, and support
+- Cloud strategy and deployment (Azure, AWS, GCP)
+- Intelligent automation and AI agents
+- AI-powered cybersecurity and analytics
+- Custom enterprise application development
+
+## AI Products
+- LeadQ.AI: AI lead intelligence and qualification platform
+- RightDoc.AI: Intelligent document automation
+- ZPOS.AI: AI-powered retail point-of-sale system
+- Presence: Workforce presence and tracking solution
+- Voice Agent: Autonomous AI voice communication agent
+
+## Industries Served
+Healthcare, Manufacturing, BFSI, Retail, Logistics
+
+## Proven Results
+- 35% reduction in healthcare claim denials
+- 2x faster retail checkout with ZPOS.AI
+- SAP S/4HANA migrations in record time
+- 100+ successful enterprise digital projects
+
+## Contact
+- Website: https://tekisho.ai
+- Email: contact@tekisho.ai
+- Hyderabad, Telangana, India
+- Irving, Texas, USA

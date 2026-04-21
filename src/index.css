@@ -4,6 +4,12 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Accessibility: keyboard focus ring */
+*:focus-visible {
+  outline: 2px solid #1B4FD8;
+  outline-offset: 2px;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;

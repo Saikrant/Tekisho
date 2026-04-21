@@ -1,6 +1,8 @@
 import React from 'react';
 import { Target, BarChart3, MessageSquare, ChevronRight, Zap } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import SEOHead from '@/components/SEOHead';
+import { OrgSchema, ProductSchema } from '@/components/SchemaMarkup';
 
 export default function Products() {
   const features = [
@@ -27,7 +29,16 @@ export default function Products() {
   ];
 
   return (
-    <main className="min-h-screen pt-32 pb-48" style={{ backgroundColor: 'var(--bg-primary)' }}>
+    <>
+      <SEOHead page="products" />
+      <OrgSchema />
+      <ProductSchema
+        name="LeadQ.AI — AI Lead Intelligence Suite"
+        description="Tekisho's AI-powered lead scoring, qualification, and routing platform for enterprise sales teams."
+        url="https://tekisho.ai/products/leadq-ai"
+        image="https://tekisho.ai/og-image.jpg"
+      />
+    <main id="main-content" className="min-h-screen pt-32 pb-48" style={{ backgroundColor: 'var(--bg-primary)' }}>
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 relative items-start">
@@ -138,5 +149,6 @@ export default function Products() {
       </div>
 
     </main>
+    </>
   );
 }
